@@ -1,0 +1,16 @@
+{
+    "name": "Lonch2",
+    "builds": [
+        {
+            "src": "client/next.config.js",
+            "use": "@now/next"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "client/$1",
+            "continue": true
+        }
+    ]
+}
