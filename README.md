@@ -4,10 +4,10 @@
 
 ```yarn install```
 
-```yarn start dev```
+```yarn dev```
 
 ### To run the parser cd into parser and run
 
 ```npm install```
 
-```npm run parser```
+```npm run parse```
