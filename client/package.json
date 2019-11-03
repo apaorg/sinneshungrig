@@ -8,6 +8,7 @@
         "start": "next start"
     },
     "dependencies": {
+        "dotenv": "^8.2.0",
         "mongodb": "^3.3.3",
         "next": "9.1.2",
         "react": "16.11.0",

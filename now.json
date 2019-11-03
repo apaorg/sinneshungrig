@@ -1,5 +1,6 @@
 {
     "name": "Lonch2",
+    "version": 2,
     "builds": [
         {
             "src": "client/next.config.js",
