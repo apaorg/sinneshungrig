@@ -12,5 +12,8 @@
             "dest": "client/$1",
             "continue": true
         }
-    ]
+    ],
+    "env": {
+        "MONGODB_URI": "@my-mongodb-uri"
+    }
 }

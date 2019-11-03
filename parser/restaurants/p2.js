@@ -1,14 +1,28 @@
 const rp = require('request-promise');
 const $ = require('cheerio');
+const moment = require('moment');
 
-const url = 'https://www.restaurangp2.se/lunch';
+moment.locale('sv');
 
 const NAME = 'P2';
+const URL = 'https://www.restaurangp2.se/lunch';
+
 const weekdays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
 
+console.log(
+    moment()
+        .day('monday')
+        .day()
+);
+
 const parseP2 = () => {
-    return rp(url)
-        .then(function(html) {
+    return rp(URL)
+        .then(html => {
+            const currentWeek = +$('.week_number', html)
+                .text()
+                .match(/\d+/)[0];
+            console.log(typeof currentWeek);
+            console.log('currentWeek', currentWeek);
             const restaurant = {
                 name: NAME,
                 info: '',
@@ -43,9 +57,9 @@ const parseP2 = () => {
                 restaurant.menu.push(currentDay);
             });
 
-            console.log('data', JSON.stringify(restaurant, null, 4));
+            // console.log('data', JSON.stringify(restaurant, null, 4));
         })
-        .catch(function(err) {
+        .catch(err => {
             //handle error
             console.error(err);
         });
