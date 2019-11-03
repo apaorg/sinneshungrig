@@ -14,11 +14,11 @@
         }
     ],
     "env": {
-        "MONGODB_URI": "@mongodb-uri"
+        "MONGODB_URI": "@my-mongodb-uri"
     },
     "build": {
         "env": {
-            "MONGODB_URI": "@mongodb-uri"
+            "MONGODB_URI": "@my-mongodb-uri"
         }
     }
 }
